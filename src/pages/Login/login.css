@@ -1,0 +1,12 @@
+.login {
+    display:flex;
+    background-color: rgb(56, 55, 55);
+}
+
+.img-background {
+    max-width: 70vw;
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+}
+

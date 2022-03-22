@@ -1,0 +1,12 @@
+img{
+    max-width: 100vw;
+    max-height: 100vh;
+    width: auto;
+    height: 150px;
+}
+.img-background{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

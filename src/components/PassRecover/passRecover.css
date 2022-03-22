@@ -1,0 +1,53 @@
+.field-recover {
+    width: 30vw;
+    height: 100vh;
+    max-width: 30vw;
+    min-width: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+}
+
+.field-recover p {
+    background-color: black;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+.field-recover p:hover {
+    color: #008CBA;
+}
+
+.title-recover {
+    margin-top: 12vw;
+    font-size: 200%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-linear-gradient(#008CBA, rgb(41, 41, 41));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.area-recover {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.area-button {
+    background-color: black;
+    margin-top: 1vw;
+    width: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
