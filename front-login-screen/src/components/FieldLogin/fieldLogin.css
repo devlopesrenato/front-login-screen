@@ -8,13 +8,18 @@
     text-align: center;
     background-color: black;
 }
-.field-login p {
+.field-login li {
     background-color: black;
     margin-top: 15px;
     cursor: pointer;
     font-size: 0.7rem;
+    list-style: none;
 }
-.field-login p:hover{
+#link-recover, #link-recover a, #link-register, #link-register a{
+    text-decoration: none;
+    background-color: transparent;
+}
+#link-recover a:hover, #link-register a:hover{
     color: #008CBA;
 }
 .title-login {

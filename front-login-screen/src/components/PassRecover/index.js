@@ -1,10 +1,11 @@
 import React from "react";
 import InputEmail from "../InputEmail";
 import Button from "../Button";
+import { Link } from 'react-router-dom'
 import './passRecover.css'
 
 const PassRecover = () => {
-    const titleLogin = "<devLopesRenato />"
+    const titleLogin = "<RecuperarSenha />"
 
 
     return(
@@ -16,7 +17,9 @@ const PassRecover = () => {
                 <div className="area-button">
                     <Button className='button buttonBlue'>Recuperar senha</Button>
                 </div>
-                <p>Voltar</p>
+                <div className="botton-recover">
+                    <li><div id='link-back'><Link to='/login'>Voltar</Link></div></li>
+                </div>
             </div>
         </div>
 

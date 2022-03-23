@@ -9,14 +9,21 @@
     background-color: black;
 }
 
-.field-recover p {
+.field-recover li {
     background-color: black;
     margin-top: 15px;
     cursor: pointer;
     font-size: 0.7rem;
+    list-style: none;
+    
+}
+.field-recover a {
+    text-decoration: none;
+    background-color: transparent;
+
 }
 
-.field-recover p:hover {
+.field-recover a:hover {
     color: #008CBA;
 }
 
@@ -50,4 +57,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.botton-recover{
+    display: flex;
+    background-color: transparent;
+    justify-content: right;
+    width: 250px;
+    
 }

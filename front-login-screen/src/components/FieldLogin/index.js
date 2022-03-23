@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../Button";
 import InputEmail from "../InputEmail";
 import InputPass from "../InputPass";
+import { Link } from 'react-router-dom'
 
 import './fieldLogin.css'
 
@@ -9,8 +10,6 @@ import './fieldLogin.css'
 
 const FieldLogin = () => {
     const titleLogin = "<FaçaSeuLogin />"
-
-    
 
     return(
         <>
@@ -24,8 +23,8 @@ const FieldLogin = () => {
                     <Button className='button buttonBlue'>Entrar</Button>
                 </div>
             <div className="botton-login">
-                <p >Esqueci a minha senha</p>
-                <p >Cadastrar</p>
+                <li ><div id='link-recover'><Link to='/recover-login'>Esqueci a minha senha</Link></div></li>
+                <li ><div id='link-register'><Link to='/register'>Cadastrar</Link></div></li>
             </div>
             </div>
         </div>
