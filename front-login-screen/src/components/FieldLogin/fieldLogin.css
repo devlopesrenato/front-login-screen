@@ -1,4 +1,4 @@
-.field-login {  
+.field-login {
     width: 30vw;
     height: 100vh;
     max-width: 30vw;
@@ -8,6 +8,7 @@
     text-align: center;
     background-color: black;
 }
+
 .field-login li {
     background-color: black;
     margin-top: 15px;
@@ -15,13 +16,20 @@
     font-size: 0.7rem;
     list-style: none;
 }
-#link-recover, #link-recover a, #link-register, #link-register a{
+
+#link-recover,
+#link-recover a,
+#link-register,
+#link-register a {
     text-decoration: none;
     background-color: transparent;
 }
-#link-recover a:hover, #link-register a:hover{
+
+#link-recover a:hover,
+#link-register a:hover {
     color: #008CBA;
 }
+
 .title-login {
     margin-top: 12vw;
     font-size: 200%;
@@ -33,6 +41,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .area-login {
     text-align: center;
     display: flex;
@@ -41,34 +50,41 @@
     align-items: center;
     background-color: black;
 }
+
 .input-email {
     margin-top: 1.4vw;
     width: 250px;
-    background-color: rgb(24, 24, 24); /*teste*/
+    background-color: rgb(24, 24, 24);
+    /*teste*/
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
     border-radius: 10px;
     border-bottom: #008CBA 1px;
 }
+
 .input-password {
     margin-top: 1vw;
     width: 250px;
-    background-color: rgb(24, 24, 24); /*teste*/
+    background-color: rgb(24, 24, 24);
+    /*teste*/
     display: flex;
     text-align: center;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
     border-radius: 10px;
 }
+
 .input-email svg {
     margin-left: 5px;
     margin-right: 5px;
 }
+
 .input-password svg {
     margin-left: 5px;
     margin-right: 5px;
 }
+
 h5 {
     width: 15vw;
     text-align: left;
@@ -85,7 +101,8 @@ h5 {
     background-color: rgb(24, 24, 24);
     margin-bottom: 1px;
 }
-.area-button{
+
+.area-button {
     background-color: black;
     margin-top: 1vw;
     width: auto;
@@ -95,12 +112,14 @@ h5 {
     justify-content: center;
     align-items: center;
 }
+
 .textarea:hover,
 .input-email:hover,
 .input-password:hover,
-.button:hover{
+.button:hover {
     box-shadow: 0px 0px 2px 2px #008CBA;
 }
+
 .login-eye {
     align-items: center;
     justify-content: center;
@@ -109,10 +128,11 @@ h5 {
     margin-right: 5px;
     background-color: transparent;
 }
-.botton-login{
+
+.botton-login {
     display: flex;
     background-color: transparent;
     justify-content: space-between;
     width: 250px;
-    
+
 }

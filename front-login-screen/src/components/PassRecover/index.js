@@ -6,14 +6,12 @@ import './passRecover.css'
 
 const PassRecover = () => {
     const titleLogin = "<RecuperarSenha />"
-
-
-    return(
+    return (
         <div className="field-recover">
             <h2 className="title-recover">{titleLogin}</h2>
             <div className="area-recover">
                 <div id="validation-email"></div>
-                <InputEmail className='input-Login' placeholder='E-mail' />  
+                <InputEmail className='input-Login' placeholder='E-mail' />
                 <div className="area-button">
                     <Button className='button buttonBlue'>Recuperar senha</Button>
                 </div>
@@ -22,7 +20,6 @@ const PassRecover = () => {
                 </div>
             </div>
         </div>
-
     )
 }
 
