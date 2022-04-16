@@ -11,8 +11,9 @@ input[type=email] {
 }
 
 #validation-email {
-  margin-top: 1vw;
-  height: 0.01vw;
+  /* margin-bottom: 0.1vw; */
+  margin-top: 0.2vw;
+  /* height: 0.01vw; */
   font-size: 0.6rem;
   color: rgb(255, 0, 0);
   background-color: transparent;
