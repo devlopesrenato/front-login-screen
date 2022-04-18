@@ -50,24 +50,40 @@ const FieldLogin = () => {
         validEmail();
         validPass();
         if (validEmail() === true && validPass() === true) {
+            // colentando os dados digitados
             const email = document.getElementById('email')["value"],
-                pass = document.getElementById('pass')["value"],
-                itensLocal = localStorage.length;
+                pass = document.getElementById('pass')["value"];
+            // defini a verificação de usuário como falso para não aceitar o login
             var verifyUser = false;
-            var nameUser;
-            for (let i = 0; i < itensLocal; i++) {
-                var arr = localStorage.getItem(`regUser${i}`);
-                var arrLocal = JSON.parse(arr);
-                if (arrLocal[0] === email && arrLocal[1] === pass) {
-                    verifyUser = true
-                    nameUser = arrLocal[2];
+            var nameUser; //variavel para receber o nome do usuário
+
+            var arrUsers = JSON.parse(localStorage.getItem('users'));
+            if (arrUsers !== null) {
+                var listUsers = arrUsers;
+                let checkEmail = listUsers.filter((item) => item.email === email);
+                console.log(checkEmail);
+                if (checkEmail.length !== 0) {
+                    if (checkEmail[0].email === email) {
+                        if (checkEmail[0].pass === pass) {
+                            nameUser = checkEmail[0].name
+                            verifyUser = true;
+                        } else {
+                            document.getElementById("pass").style.boxShadow = '0px 1px 0px 0px red';
+                            document.getElementById("validation-pass").innerText = ("Senha incorreta.")
+                        }
+                    }
+                } else {
+                    document.getElementById("email").style.boxShadow = '0px 1px 0px 0px red';
+                    document.getElementById("validation-email").innerText = ("E-mail não registrado.")
                 }
+            } else {
+                document.getElementById("email").style.boxShadow = '0px 1px 0px 0px red';
+                document.getElementById("validation-email").innerText = ("E-mail não registrado.")
             }
+
             if (verifyUser === true) {
                 localStorage.setItem('logedUser', nameUser);
                 window.location.href = '/home'
-            } else {
-                document.getElementById("validation-pass").innerText = ("E-mail ou senha incorretos.")
             }
 
         } else if (validEmail() === "") {

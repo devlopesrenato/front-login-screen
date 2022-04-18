@@ -75,15 +75,49 @@ const FieldRegister = () => {
         validEmail();
         validPass();
         validName();
-        if (validEmail() === true && validPass() === true) {
+        if (validEmail() === true && validPass() === true && validName() === true) {
+            //coletando os dados digitados pelo usuário
             const email = document.getElementById('email')["value"],
-            pass = document.getElementById('pass')["value"],
-            name = document.getElementById('name')["value"];
-            const lsKey = localStorage.length;
-            var arr = [email, pass, name];
-            localStorage.setItem(`regUser${lsKey}`, JSON.stringify(arr));
-            alert(name + " cadastado!")
-            window.location.href = '/login'
+                pass = document.getElementById('pass')["value"],
+                name = document.getElementById('name')["value"];
+            // passando os dados do usuário para uma Array
+            const user = { email, pass, name };
+            // coletando dados do localStorage se houver
+            const arrUsers = localStorage.getItem('users');
+            // variaveis para no array de usuarios e array temp para concatenar novo usuario caso ja exista usuario criado
+            let newArrUsers = []
+            let arrUserConcat;
+            // verificação se existe usuário cadastrado
+            // se não cria um novo registro local
+            // se sim concatena o novo com os que já existiam
+            if (arrUsers === null) {
+                newArrUsers = [user];
+                localStorage.setItem('users', JSON.stringify(newArrUsers));
+                alert(name + " cadastado!");
+                window.location.href = '/login';
+            } else {
+                // verificando se já existe o email
+                let verifyUser
+                // coletenado dados do registro
+                let arrUsersTemp = JSON.parse(localStorage.getItem('users'));
+                //verificação de seguranã (arrUsersTemp nunca deve ser null nesse ponto)
+                if (arrUsersTemp !== null) {
+                    // verifyuser o resultado do filtro por email, se não retornar nada significa que o email já exista
+                    verifyUser = arrUsersTemp.filter((item) => item.email === email);
+                    // se o length for diferente de 0 já existe este email cadastrado
+                    if (verifyUser.length !== 0) {
+                        document.getElementById("email").style.boxShadow = '0px 1px 0px 0px red';
+                        document.getElementById("validation-email").innerText = ("Este e-mail já está em uso.");
+                    } else { // se o length for 0 o email não está cadastrado e pode ser inserido no registro
+                        arrUserConcat = JSON.parse(arrUsers);
+                        newArrUsers = arrUserConcat.concat(user);
+                        localStorage.setItem('users', JSON.stringify(newArrUsers));
+                        alert(name + " cadastado!");
+                        window.location.href = '/login';
+                    }
+                }
+            }
+
         } else if (validEmail() === "") {
             document.getElementById("email").style.boxShadow = '0px 1px 0px 0px red';
             document.getElementById("validation-email").innerText = ("Digite seu e-mail.")
