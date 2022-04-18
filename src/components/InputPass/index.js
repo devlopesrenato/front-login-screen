@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { HiEye, HiEyeOff } from 'react-icons/hi'
 import { MdPassword } from 'react-icons/md'
 
-const InputPass = ({ className, placeholder }) => {
+const InputPass = ({ className, placeholder, onFocus, id, onKeyUp }) => {
     const [password, setPassword] = useState("")
     const [showPass, setShowPass] = useState(false)
 
@@ -16,7 +16,7 @@ const InputPass = ({ className, placeholder }) => {
         <>
             <div className="input-password">
                 <MdPassword />
-                <input type={showPass ? "text" : "password"} className={className} placeholder={placeholder} value={password} onChange={e => setPassword(e.target.value)} />
+                <input type={showPass ? "text" : "password"} id={id} className={className} placeholder={placeholder} value={password} onFocus={onFocus} onChange={e => setPassword(e.target.value)} onKeyUp={onKeyUp} />
                 <div className="login-eye">
                     {showPass ? (
                         <HiEye

@@ -113,6 +113,7 @@ h5 {
 .textarea:hover,
 .input-email:hover,
 .input-password:hover,
+.input-name:hover,
 .button:hover {
     box-shadow: 0px 0px 2px 2px #008CBA;
 }

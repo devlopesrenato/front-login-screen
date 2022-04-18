@@ -26,3 +26,11 @@ input[type=text] {
   margin-left: 5px;
   margin-right: 5px;
 }
+#validation-name {
+  margin-top: 0.2vw;
+  font-size: 0.6rem;
+  color: rgb(255, 0, 0);
+  background-color: transparent;
+  text-align: left;
+  width: 250px;
+}

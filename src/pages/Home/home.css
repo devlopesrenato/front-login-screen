@@ -1,0 +1,41 @@
+.home {
+    background-color: black;
+    align-items: center;
+    margin: 0 auto;
+    width: 980px;
+}
+
+#container-home {
+    margin: 0 auto;
+    width: auto;
+    position: relative;
+}
+
+#welcome {
+    z-index: 100;
+    margin-top: 25px;
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: baseline;
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+    font-size: 11px;
+}
+
+a:hover {
+    color: #008CBA;
+}
